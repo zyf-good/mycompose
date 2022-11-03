@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+<color name="_xpopup_content_color">#ff333333</color>
+
+<color name="_xpopup_dark_color">#ff232323</color>
+
+<color name="_xpopup_light_color">#ffffffff</color>
+
+<color name="_xpopup_list_dark_divider">#ff444444</color>
+
+<color name="_xpopup_list_divider">#ffeeeeee</color>
+
+<color name="_xpopup_title_color">#ff444444</color>
+
+<color name="_xpopup_white_color">#fff1f1f1</color>
+
+<color name="abc_decor_view_status_guard">#ff000000</color>
+
+<color name="abc_decor_view_status_guard_light">#ffffffff</color>
+
+<color name="abc_search_url_text_normal">#ff7fa87f</color>
+
+<color name="abc_search_url_text_pressed">@android:color/black</color>
+
+<color name="abc_search_url_text_selected">@android:color/black</color>
+
+<color name="accent_material_dark">@color/material_deep_teal_200</color>
+
+<color name="accent_material_light">@color/material_deep_teal_500</color>
+
+<color name="androidx_core_ripple_material_light">#1f000000</color>
+
+<color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
+
+<color name="background_floating_material_dark">@color/material_grey_800</color>
+
+<color name="background_floating_material_light">@android:color/white</color>
+
+<color name="background_material_dark">@color/material_grey_850</color>
+
+<color name="background_material_light">@color/material_grey_50</color>
+
+<color name="beijing">#fff7f7f7</color>
+
+<color name="bg_color">#ffededed</color>
+
+<color name="black">#000000</color>
+
+<color name="blue_light">#ffdae4f2</color>
+
+<color name="blue_light_d">#ffc0d4f1</color>
+
+<color name="blue_normal_dark">#14dfdfdf</color>
+
+<color name="blue_press_dark">#1ec0d4f1</color>
+
+<color name="bright_foreground_disabled_material_dark">#80ffffff</color>
+
+<color name="bright_foreground_disabled_material_light">#80000000</color>
+
+<color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
+
+<color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
+
+<color name="bright_foreground_material_dark">@android:color/white</color>
+
+<color name="bright_foreground_material_light">@android:color/black</color>
+
+<color name="button_material_dark">#ff5a595b</color>
+
+<color name="button_material_light">#ffd6d7d7</color>
+
+<color name="c">#ffbbbbbb</color>
+
+<color name="cardview_dark_background">#ff424242</color>
+
+<color name="cardview_light_background">#ffffffff</color>
+
+<color name="cardview_shadow_end_color">#03000000</color>
+
+<color name="cardview_shadow_start_color">#37000000</color>
+
+<color name="cc">#ff59a9ff</color>
+
+<color name="circle">#aa738ffe</color>
+
+<color name="col01">#99ffb07b</color>
+
+<color name="col02">#99f4c09d</color>
+
+<color name="col03">#99e86d1a</color>
+
+<color name="col04">#99fb9753</color>
+
+<color name="col05">#99fbcb53</color>
+
+<color name="col06">#99ddb98d</color>
+
+<color name="col07">#99609daf</color>
+
+<color name="col08">#9951cff4</color>
+
+<color name="col09">#9922c6f6</color>
+
+<color name="col10">#99aeedff</color>
+
+<color name="col11">#996099af</color>
+
+<color name="col12">#997cefd5</color>
+
+<color name="col13">#9922caa4</color>
+
+<color name="col14">#9908fdc6</color>
+
+<color name="col15">#992f5e53</color>
+
+<color name="col16">#9900b88f</color>
+
+<color name="col17">#9948ffd6</color>
+
+<color name="col18">#992ffd2f</color>
+
+<color name="col19">#99b5ffb5</color>
+
+<color name="col20">#99a3ea52</color>
+
+<color name="col21">#99b2cc95</color>
+
+<color name="col22">#99c9ff8b</color>
+
+<color name="col23">#9996ff1f</color>
+
+<color name="col24">#99e6fdcc</color>
+
+<color name="col25">#99ff91da</color>
+
+<color name="col26">#99dca5c9</color>
+
+<color name="col27">#99ba2588</color>
+
+<color name="col28">#99ff3ebe</color>
+
+<color name="col29">#99faddf0</color>
+
+<color name="col30">#99d6a8c7</color>
+
+<color name="col31">#99ff56c6</color>
+
+<color name="col32">#99fff6a3</color>
+
+<color name="col33">#99e4e0bc</color>
+
+<color name="col34">#99d8cf7c</color>
+
+<color name="col35">#99ecd614</color>
+
+<color name="col36">#99fdf17e</color>
+
+<color name="col37">#99fffbda</color>
+
+<color name="col38">#99fbe40c</color>
+
+<color name="col39">#99ea8ffa</color>
+
+<color name="col40">#99dfa9e8</color>
+
+<color name="col41">#99a66ab1</color>
+
+<color name="col42">#99dd1cff</color>
+
+<color name="col43">#99e0cae4</color>
+
+<color name="col44">#99b191b6</color>
+
+<color name="col45">#99f4b5ff</color>
+
+<color name="col46">#997ee1f3</color>
+
+<color name="col47">#9957dbf3</color>
+
+<color name="col48">#99b3e9f3</color>
+
+<color name="col49">#99a4c5cc</color>
+
+<color name="col50">#9900d8ff</color>
+
+<color name="col51">#9991cad5</color>
+
+<color name="colorAccent">#ffff0000</color>
+
+<color name="colorPrimary">#ffffffff</color>
+
+<color name="colorPrimaryDark">#ff3700b3</color>
+
+<color name="colorTransparent">#00ffffff</color>
+
+<color name="color_000000">#ff000000</color>
+
+<color name="color_00000000">#00000000</color>
+
+<color name="color_00AF66">#ff00af66</color>
+
+<color name="color_0D0D0D">#ff0d0d0d</color>
+
+<color name="color_1B1B1B">#ff1b1b1b</color>
+
+<color name="color_222222">#ff222222</color>
+
+<color name="color_30BCF1">#ff30bcf1</color>
+
+<color name="color_333333">#ff333333</color>
+
+<color name="color_3372FD">#ff3372fd</color>
+
+<color name="color_3877F8">#ff3877f8</color>
+
+<color name="color_393B45">#ff393b45</color>
+
+<color name="color_3C69A7">#ff3c69a7</color>
+
+<color name="color_3EAF75">#ff3eaf75</color>
+
+<color name="color_3FEDBA">#ff3fedba</color>
+
+<color name="color_427AF7">#ff427af7</color>
+
+<color name="color_464646">#ff464646</color>
+
+<color name="color_4E4E4E">#ff4e4e4e</color>
+
+<color name="color_557DF6">#ff557df6</color>
+
+<color name="color_57CDFF">#ff57cdff</color>
+
+<color name="color_5989F9">#ff5989f9</color>
+
+<color name="color_644931">#ff644931</color>
+
+<color name="color_65656B">#ff65656b</color>
+
+<color name="color_666666">#ff666666</color>
+
+<color name="color_68C102">#ff68c102</color>
+
+<color name="color_707070">#ff707070</color>
+
+<color name="color_724119">#ff724119</color>
+
+<color name="color_76CEEC">#ff76ceec</color>
+
+<color name="color_784244">#ff784244</color>
+
+<color name="color_797979">#ff59b7f6</color>
+
+<color name="color_7E7E7E">#ff7e7e7e</color>
+
+<color name="color_7f000000">#6f000000</color>
+
+<color name="color_808080">#ff808080</color>
+
+<color name="color_8D8D8D">#ff8d8d8d</color>
+
+<color name="color_949494">#ff949494</color>
+
+<color name="color_979696">#ff979696</color>
+
+<color name="color_979797">#ff979797</color>
+
+<color name="color_999999">#ff999999</color>
+
+<color name="color_9F8051">#ff9f8051</color>
+
+<color name="color_9F9F9F">#ff9f9f9f</color>
+
+<color name="color_A5D7BD">#ff90e9c4</color>
+
+<color name="color_B3B5BD">#ffb3b5bd</color>
+
+<color name="color_B8BCC2">#ffb8bcc2</color>
+
+<color name="color_CCCCCC">#ffcccccc</color>
+
+<color name="color_CECECE">#ffcecece</color>
+
+<color name="color_DCDCDC">#ffdcdcdc</color>
+
+<color name="color_E9C292">#ffe9c292</color>
+
+<color name="color_EBEBEB">#ffebebeb</color>
+
+<color name="color_ECECEC">#ffececec</color>
+
+<color name="color_EDEDED">#ffededed</color>
+
+<color name="color_EFEFEF">#ffefefef</color>
+
+<color name="color_F0F0F0">#fff0f0f0</color>
+
+<color name="color_F1F7FC">#fff1f7fc</color>
+
+<color name="color_F3BC6C">#fff3bc6c</color>
+
+<color name="color_F4FFE8">#fff4ffe8</color>
+
+<color name="color_F53D60">#fff53d60</color>
+
+<color name="color_F5F5F5">#fff5f5f5</color>
+
+<color name="color_F5F7FD">#fff5f7fd</color>
+
+<color name="color_F5FDF7">#fff5fdf7</color>
+
+<color name="color_F6F6F6">#fff6f6f6</color>
+
+<color name="color_F7F7F7">#fff7f7f7</color>
+
+<color name="color_F8B551">#fff8b551</color>
+
+<color name="color_FAFAFA">#fffafafa</color>
+
+<color name="color_FD4B49">#fffd4b49</color>
+
+<color name="color_FEA700">#fffea700</color>
+
+<color name="color_FEB837">#fffeb837</color>
+
+<color name="color_FEE6CC">#fffee6cc</color>
+
+<color name="color_FF0505">#ffff0505</color>
+
+<color name="color_FF1515">#ffff1515</color>
+
+<color name="color_FF4301">#ffff4301</color>
+
+<color name="color_FF6279">#ffff6279</color>
+
+<color name="color_FF6604">#ff68c102</color>
+
+<color name="color_FF804E">#ffff804e</color>
+
+<color name="color_FF993F">#ffff993f</color>
+
+<color name="color_FFA847">#ffffa847</color>
+
+<color name="color_FFFBF3">#fffffbf3</color>
+
+<color name="color_b1b1b1">#ff484848</color>
+
+<color name="color_ec4c48">#ffec4c48</color>
+
+<color name="color_f25057">#fff25057</color>
+
+<color name="color_ff0000">#ffff0000</color>
+
+<color name="color_page_text_tab">#ff666666</color>
+
+<color name="color_tabTitle_selected">#ffec5840</color>
+
+<color name="color_top_bar_bg">#ffec5840</color>
+
+<color name="contents_text">#ff000000</color>
+
+<color name="cpb_default_color">#ff33b5e5</color>
+
+<color name="dark">#8075acfb</color>
+
+<color name="design_bottom_navigation_shadow_color">#14000000</color>
+
+<color name="design_dark_default_color_background">#ff121212</color>
+
+<color name="design_dark_default_color_error">#ffcf6679</color>
+
+<color name="design_dark_default_color_on_background">#ffffffff</color>
+
+<color name="design_dark_default_color_on_error">#ff000000</color>
+
+<color name="design_dark_default_color_on_primary">#ff000000</color>
+
+<color name="design_dark_default_color_on_secondary">#ff000000</color>
+
+<color name="design_dark_default_color_on_surface">#ffffffff</color>
+
+<color name="design_dark_default_color_primary">#ffba86fc</color>
+
+<color name="design_dark_default_color_primary_dark">#ff000000</color>
+
+<color name="design_dark_default_color_primary_variant">#ff3700b3</color>
+
+<color name="design_dark_default_color_secondary">#ff03dac6</color>
+
+<color name="design_dark_default_color_secondary_variant">#ff03dac6</color>
+
+<color name="design_dark_default_color_surface">#ff121212</color>
+
+<color name="design_default_color_background">#ffffffff</color>
+
+<color name="design_default_color_error">#ffb00020</color>
+
+<color name="design_default_color_on_background">#ff000000</color>
+
+<color name="design_default_color_on_error">#ffffffff</color>
+
+<color name="design_default_color_on_primary">#ffffffff</color>
+
+<color name="design_default_color_on_secondary">#ff000000</color>
+
+<color name="design_default_color_on_surface">#ff000000</color>
+
+<color name="design_default_color_primary">#ff6200ee</color>
+
+<color name="design_default_color_primary_dark">#ff3700b3</color>
+
+<color name="design_default_color_primary_variant">#ff3700b3</color>
+
+<color name="design_default_color_secondary">#ff03dac6</color>
+
+<color name="design_default_color_secondary_variant">#ff018786</color>
+
+<color name="design_default_color_surface">#ffffffff</color>
+
+<color name="design_fab_shadow_end_color">@android:color/transparent</color>
+
+<color name="design_fab_shadow_mid_color">#14000000</color>
+
+<color name="design_fab_shadow_start_color">#44000000</color>
+
+<color name="design_fab_stroke_end_inner_color">#0a000000</color>
+
+<color name="design_fab_stroke_end_outer_color">#0f000000</color>
+
+<color name="design_fab_stroke_top_inner_color">#1affffff</color>
+
+<color name="design_fab_stroke_top_outer_color">#2effffff</color>
+
+<color name="design_snackbar_background_color">#ff323232</color>
+
+<color name="dialog_bg">#fff5f5f5</color>
+
+<color name="dim_foreground_disabled_material_dark">#80bebebe</color>
+
+<color name="dim_foreground_disabled_material_light">#80323232</color>
+
+<color name="dim_foreground_material_dark">#ffbebebe</color>
+
+<color name="dim_foreground_material_light">#ff323232</color>
+
+<color name="dkplayer_background_color">#4d000000</color>
+
+<color name="dkplayer_theme_color">#ff39c5bb</color>
+
+<color name="dkplayer_theme_color_translucent">#9939c5bb</color>
+
+<color name="dlg_bkg_dark">#f0181818</color>
+
+<color name="eidtext_color">#ffededed</color>
+
+<color name="empty">#00ffffff</color>
+
+<color name="encode_view">#ffffffff</color>
+
+<color name="error_color_material_dark">#ffff7043</color>
+
+<color name="error_color_material_light">#ffff5722</color>
+
+<color name="foreground_material_dark">@android:color/white</color>
+
+<color name="foreground_material_light">@android:color/black</color>
+
+<color name="fragment_a">#ff90ab31</color>
+
+<color name="fragment_a_status">#ffff9000</color>
+
+<color name="fragment_b">#ff9831ab</color>
+
+<color name="fragment_b_status">#ffff007e</color>
+
+<color name="gold_color">#ffd8d7d7</color>
+
+<color name="gplus_color_1">#ff3e802f</color>
+
+<color name="gplus_color_2">#fff4b400</color>
+
+<color name="gplus_color_3">#ff427fed</color>
+
+<color name="gplus_color_4">#ffb23424</color>
+
+<color name="grayText">#ff6f6f6f</color>
+
+<color name="gray_black">#ff202020</color>
+
+<color name="gray_dark">#ff646464</color>
+
+<color name="gray_light">#fff2f2f2</color>
+
+<color name="gray_light_d">#ffdfdfdf</color>
+
+<color name="gray_normal_dark">#14dfdfdf</color>
+
+<color name="gray_press_dark">#1ec0d4f1</color>
+
+<color name="green_light">#2e548235</color>
+
+<color name="green_light_d">#58548235</color>
+
+<color name="grgray">#ff686868</color>
+
+<color name="header">#ff58567d</color>
+
+<color name="help_button_view">#ffcccccc</color>
+
+<color name="help_view">#ff404040</color>
+
+<color name="highlighted_text_material_dark">#6680cbc4</color>
+
+<color name="highlighted_text_material_light">#66009688</color>
+
+<color name="ic_back_press">#ff323336</color>
+
+<color name="ios_dialog_button_press">#0f000000</color>
+
+<color name="ios_dialog_button_press_dark">#80323232</color>
+
+<color name="ios_dialog_split_dark">#ff4e4e50</color>
+
+<color name="ios_dialog_split_light">#2c000000</color>
+
+<color name="ios_dlg_bkg">#e6ffffff</color>
+
+<color name="ios_dlg_text">#ff007aff</color>
+
+<color name="ios_menu_bkg">#f2ffffff</color>
+
+<color name="ip_camera_pre">#ff353535</color>
+
+<color name="ip_color_accent">#ff1aad19</color>
+
+<color name="ip_color_press">#ffe0e0e0</color>
+
+<color name="ip_color_primary">#ff393a3f</color>
+
+<color name="ip_color_primary_dark">#ff303135</color>
+
+<color name="ip_color_primary_trans">#ec2f3335</color>
+
+<color name="ip_text_primary_inverted">#ffffffff</color>
+
+<color name="ip_text_secondary_inverted">#66ffffff</color>
+
+<color name="ksad_88_white">#88ffffff</color>
+
+<color name="ksad_99_black">#99000000</color>
+
+<color name="ksad_99_white">#99ffffff</color>
+
+<color name="ksad_black_6c">#ff6c6c6c</color>
+
+<color name="ksad_black_alpha100">#ff000000</color>
+
+<color name="ksad_black_alpha20">#33000000</color>
+
+<color name="ksad_black_alpha50">#80000000</color>
+
+<color name="ksad_default_dialog_bg_color">#4d666666</color>
+
+<color name="ksad_default_privacy_link_color">#ffffffff</color>
+
+<color name="ksad_gray_9c">#ff9c9c9c</color>
+
+<color name="ksad_jinniu_end_origin_color">#ff9c9c9c</color>
+
+<color name="ksad_no_title_common_dialog_negativebtn_color">#ff666666</color>
+
+<color name="ksad_no_title_common_dialog_positivebtn_color">#ff5181fb</color>
+
+<color name="ksad_play_again_desc_text_color">#ff666666</color>
+
+<color name="ksad_play_again_desc_text_color_horizontal">#ffffffff</color>
+
+<color name="ksad_play_again_horizontal_bg">#b3000000</color>
+
+<color name="ksad_play_again_horizontal_bg_light">#4d000000</color>
+
+<color name="ksad_play_again_title_text_color">#ff222222</color>
+
+<color name="ksad_play_again_title_text_color_horizontal">#ffffffff</color>
+
+<color name="ksad_playable_pre_tips_icon_bg">#33ffffff</color>
+
+<color name="ksad_reward_main_color">#fffe3666</color>
+
+<color name="ksad_reward_original_price">#ff666666</color>
+
+<color name="ksad_reward_undone_color">#ff9c9c9c</color>
+
+<color name="ksad_secondary_btn_color">#1afe3666</color>
+
+<color name="ksad_shake_icon_bg_start_color">#66000000</color>
+
+<color name="ksad_text_black_222">#ff222222</color>
+
+<color name="ksad_translucent">#00000000</color>
+
+<color name="ksad_white">#ffffffff</color>
+
+<color name="ksad_white_alpha_20">#33ffffff</color>
+
+<color name="light">#804690fd</color>
+
+<color name="main_color">#ff65b9ff</color>
+
+<color name="material_blue_grey_800">#ff37474f</color>
+
+<color name="material_blue_grey_900">#ff263238</color>
+
+<color name="material_blue_grey_950">#ff21272b</color>
+
+<color name="material_deep_teal_200">#ff80cbc4</color>
+
+<color name="material_deep_teal_500">#ff008577</color>
+
+<color name="material_grey_100">#fff5f5f5</color>
+
+<color name="material_grey_300">#ffe0e0e0</color>
+
+<color name="material_grey_50">#fffafafa</color>
+
+<color name="material_grey_600">#ff757575</color>
+
+<color name="material_grey_800">#ff424242</color>
+
+<color name="material_grey_850">#ff303030</color>
+
+<color name="material_grey_900">#ff212121</color>
+
+<color name="material_tip_color">#ff757575</color>
+
+<color name="menu_split_line">#ffe0e3e9</color>
+
+<color name="menu_split_line_ios">#2c000000</color>
+
+<color name="menu_split_space">#fff1f2f4</color>
+
+<color name="mtrl_btn_text_color_disabled">#61000000</color>
+
+<color name="mtrl_btn_transparent_bg_color">#00ffffff</color>
+
+<color name="mtrl_scrim_color">#52000000</color>
+
+<color name="mtrl_textinput_default_box_stroke_color">#6b000000</color>
+
+<color name="mtrl_textinput_disabled_color">#1f000000</color>
+
+<color name="mtrl_textinput_filled_box_default_background_color">#0a000000</color>
+
+<color name="mtrl_textinput_focused_box_stroke_color">#00000000</color>
+
+<color name="mtrl_textinput_hovered_box_stroke_color">#de000000</color>
+
+<color name="notification_action_color_filter">#ffffffff</color>
+
+<color name="notification_error">#ffe74e63</color>
+
+<color name="notification_finish">#ff53ae5d</color>
+
+<color name="notification_icon_bg_color">#ff9e9e9e</color>
+
+<color name="notification_material_background_media_default_color">#ff424242</color>
+
+<color name="notification_normal">#ff353535</color>
+
+<color name="notification_warning">#ffef8e43</color>
+
+<color name="orange_light">#fffae6d6</color>
+
+<color name="orange_light_d">#fff9dac1</color>
+
+<color name="picture_color_20">#20000000</color>
+
+<color name="picture_color_20c064">#ff20c064</color>
+
+<color name="picture_color_394a3e">#ff394a3e</color>
+
+<color name="picture_color_4d">#ff4d4d4d</color>
+
+<color name="picture_color_4e4d4e">#ff4e4d4e</color>
+
+<color name="picture_color_529BeA">#ff529bea</color>
+
+<color name="picture_color_53575e">#ff53575e</color>
+
+<color name="picture_color_70">#70000000</color>
+
+<color name="picture_color_80">#80000000</color>
+
+<color name="picture_color_9b">#ff9b9b9b</color>
+
+<color name="picture_color_a83">#a8333333</color>
+
+<color name="picture_color_aab2bd">#ffaab2bd</color>
+
+<color name="picture_color_ba3">#b0567ba3</color>
+
+<color name="picture_color_bfe85d">#bf96e85d</color>
+
+<color name="picture_color_black">#ff000000</color>
+
+<color name="picture_color_blue">#ff7d7dff</color>
+
+<color name="picture_color_e">#ffeeeeee</color>
+
+<color name="picture_color_e0ff6100">#e0ff6100</color>
+
+<color name="picture_color_eb">#ffebebeb</color>
+
+<color name="picture_color_ec">#ffececec</color>
+
+<color name="picture_color_f0">#fff0f0f0</color>
+
+<color name="picture_color_f2">#fff2f2f2</color>
+
+<color name="picture_color_fa">#fffafafa</color>
+
+<color name="picture_color_fa632d">#fffa632d</color>
+
+<color name="picture_color_ff572e">#ffff572e</color>
+
+<color name="picture_color_ffd042">#ffffd042</color>
+
+<color name="picture_color_ffe85d">#ff96e85d</color>
+
+<color name="picture_color_grey">#ff393a3e</color>
+
+<color name="picture_color_grey_3e">#dd393a3e</color>
+
+<color name="picture_color_half_grey">#a0393a3e</color>
+
+<color name="picture_color_half_white">#99ffffff</color>
+
+<color name="picture_color_light_grey">#ff999999</color>
+
+<color name="picture_color_transparent">#00000000</color>
+
+<color name="picture_color_transparent_e0db">#e0dbdbdb</color>
+
+<color name="picture_color_transparent_white">#f0ffffff</color>
+
+<color name="picture_color_white">#ffffffff</color>
+
+<color name="pop_bkg">#dc000000</color>
+
+<color name="possible_result_points">#c0ffff00</color>
+
+<color name="primary_dark_material_dark">@android:color/black</color>
+
+<color name="primary_dark_material_light">@color/material_grey_600</color>
+
+<color name="primary_material_dark">@color/material_grey_900</color>
+
+<color name="primary_material_light">@color/material_grey_100</color>
+
+<color name="primary_text_default_material_dark">#ffffffff</color>
+
+<color name="primary_text_default_material_light">#de000000</color>
+
+<color name="primary_text_disabled_material_dark">#4dffffff</color>
+
+<color name="primary_text_disabled_material_light">#39000000</color>
+
+<color name="progress_dlg_bkg">#dc000000</color>
+
+<color name="rect">#aae84e40</color>
+
+<color name="result_image_border">#ffffffff</color>
+
+<color name="result_minor_text">#ffc0c0c0</color>
+
+<color name="result_points">#c000ff00</color>
+
+<color name="result_text">#ffffffff</color>
+
+<color name="result_view">#b0000000</color>
+
+<color name="ripple_material_dark">#33ffffff</color>
+
+<color name="ripple_material_light">#1f000000</color>
+
+<color name="rsbColorSeekBarDefault">#ffc3c3c3</color>
+
+<color name="rsbColorThumbBorder">#ffd7d7d7</color>
+
+<color name="rsbColorThumbDefault">#ffffffff</color>
+
+<color name="rsbColorThumbPressed">#ffe7e7e7</color>
+
+<color name="sbc_header_text">#ff808080</color>
+
+<color name="sbc_header_view">#ffffffff</color>
+
+<color name="sbc_layout_view">#ffffffff</color>
+
+<color name="sbc_list_item">#fffff0e0</color>
+
+<color name="sbc_page_number_text">#ff000000</color>
+
+<color name="sbc_snippet_text">#ff4b4b4b</color>
+
+<color name="secondary_text_default_material_dark">#b3ffffff</color>
+
+<color name="secondary_text_default_material_light">#8a000000</color>
+
+<color name="secondary_text_disabled_material_dark">#36ffffff</color>
+
+<color name="secondary_text_disabled_material_light">#24000000</color>
+
+<color name="shadow">#25808080</color>
+
+<color name="share_text">#ff000000</color>
+
+<color name="share_view">#ffffffff</color>
+
+<color name="status_text">#ffffffff</color>
+
+<color name="status_view">#50000000</color>
+
+<color name="switch_thumb_disabled_material_dark">#ff616161</color>
+
+<color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
+
+<color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
+
+<color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+
+<color name="tabTitlePressed">#6633b5e5</color>
+
+<color name="tab_view_title_n">#ff3fbae4</color>
+
+<color name="tab_view_title_s">#ff2d2d2d</color>
+
+<color name="textBlue">#ffff4301</color>
+
+<color name="textColorFocus">#ffff0000</color>
+
+<color name="textColorNormal">#ff333333</color>
+
+<color name="textGreen">#ff2d78fb</color>
+
+<color name="tip_color">#ff8f8f8f</color>
+
+<color name="tooltip_background_dark">#e6616161</color>
+
+<color name="tooltip_background_light">#e6ffffff</color>
+
+<color name="transparent">#00000000</color>
+
+<color name="triangle">#aa72d572</color>
+
+<color name="tt_appdownloader_notification_material_background_color">#fffafafa</color>
+
+<color name="tt_appdownloader_notification_title_color">#7f0b0198</color>
+
+<color name="tt_appdownloader_s1">#ff333333</color>
+
+<color name="tt_appdownloader_s13">#ffcccccc</color>
+
+<color name="tt_appdownloader_s18">#ffeeeeee</color>
+
+<color name="tt_appdownloader_s4">#ffff819f</color>
+
+<color name="tt_appdownloader_s8">#ffffffff</color>
+
+<color name="ttdownloader_transparent">#00000000</color>
+
+<color name="txtNatr">#ff0d0d0d</color>
+
+<color name="ucrop_color_active_aspect_ratio">@color/ucrop_color_blaze_orange</color>
+
+<color name="ucrop_color_active_controls_color">@color/ucrop_color_blaze_orange</color>
+
+<color name="ucrop_color_ba3">#b0567ba3</color>
+
+<color name="ucrop_color_black">#ff000000</color>
+
+<color name="ucrop_color_blaze_orange">#ffff6300</color>
+
+<color name="ucrop_color_crop_background">@color/ucrop_color_black</color>
+
+<color name="ucrop_color_default_crop_frame">#ffffffff</color>
+
+<color name="ucrop_color_default_crop_grid">#80ffffff</color>
+
+<color name="ucrop_color_default_dimmed">#8c000000</color>
+
+<color name="ucrop_color_default_logo">#4f212121</color>
+
+<color name="ucrop_color_ebony_clay">#ff20242f</color>
+
+<color name="ucrop_color_ec">#ffececec</color>
+
+<color name="ucrop_color_heather">#ffb3bece</color>
+
+<color name="ucrop_color_inactive_aspect_ratio">@color/ucrop_color_ebony_clay</color>
+
+<color name="ucrop_color_inactive_controls_color">@color/ucrop_color_heather</color>
+
+<color name="ucrop_color_progress_wheel_line">@color/ucrop_color_ebony_clay</color>
+
+<color name="ucrop_color_statusbar">#fff5f5f5</color>
+
+<color name="ucrop_color_toolbar">@color/ucrop_color_white</color>
+
+<color name="ucrop_color_toolbar_widget">@color/ucrop_color_black</color>
+
+<color name="ucrop_color_white">#ffffffff</color>
+
+<color name="ucrop_color_widget">@color/ucrop_color_black</color>
+
+<color name="ucrop_color_widget_active">@color/ucrop_color_white</color>
+
+<color name="ucrop_color_widget_background">@color/ucrop_color_ebony_clay</color>
+
+<color name="ucrop_color_widget_rotate_angle">@color/ucrop_color_ebony_clay</color>
+
+<color name="ucrop_color_widget_rotate_mid_line">@color/ucrop_color_blaze_orange</color>
+
+<color name="ucrop_color_widget_text">@color/ucrop_color_blaze_orange</color>
+
+<color name="view_bg">#00000000</color>
+
+<color name="view_br">#ffeeeeee</color>
+
+<color name="viewfinder_frame">#ff000000</color>
+
+<color name="viewfinder_laser">#ffff0000</color>
+
+<color name="viewfinder_mask">#60000000</color>
+
+<color name="water_color_black">#ff000000</color>
+
+<color name="water_color_blue">#ff0000ff</color>
+
+<color name="water_color_blue2">#ff0479ca</color>
+
+<color name="water_color_def">#ff1b1b1b</color>
+
+<color name="water_color_dkgray">#ff444444</color>
+
+<color name="water_color_green">#ff00ff00</color>
+
+<color name="water_color_green2">#9939c5bb</color>
+
+<color name="water_color_gyan">#ff00ffff</color>
+
+<color name="water_color_gyan2">#ff001313</color>
+
+<color name="water_color_red">#ffff0000</color>
+
+<color name="water_color_red2">#ffec5840</color>
+
+<color name="water_color_violet">#ffff00ff</color>
+
+<color name="water_color_violet2">#ff7570ff</color>
+
+<color name="water_color_white">#ffffffff</color>
+
+<color name="water_color_yellow">#ffffff00</color>
+
+<color name="water_color_yellow2">#ffda5f00</color>
+
+<color name="white">#ffffffff</color>
+
+<color name="white_50_transparent">#80ffffff</color>
+
+</resources>

@@ -40,6 +40,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.constraintlayout.compose.ConstraintLayout
@@ -70,12 +71,30 @@ class MainActivity : ComponentActivity() {
                         ScreenPage(this)
                         //Leetcode()
                         //CustomImage()
+                        //XmlView()
                     }
                 }
 
             }
         }
     }
+}
+
+@Composable
+fun XmlView(){
+    var selectedItem by remember { mutableStateOf(0) }
+
+        AndroidView(factory = { context ->
+            android.widget.Button(context).apply{
+                setOnClickListener{
+                    selectedItem += 1
+                }
+            }
+        },
+        modifier = Modifier.fillMaxSize(),
+        update = {view ->
+            view.text = selectedItem.toString()
+        })
 }
 
 @Composable
@@ -102,7 +121,7 @@ fun CustomImage(){
             RoundedCornerShape(16.dp, 16.dp, 0.dp, 0.dp)
         )
         .background(Yellow)
-        .clip( RoundedCornerShape(16.dp, 16.dp, 0.dp, 0.dp))
+        .clip(RoundedCornerShape(16.dp, 16.dp, 0.dp, 0.dp))
         .aspectRatio(16f / 9f)
         .blur(
             radiusX = 10.dp,

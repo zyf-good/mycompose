@@ -44,6 +44,7 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.core.view.WindowCompat
 import com.google.accompanist.insets.ProvideWindowInsets
+import com.google.accompanist.insets.statusBarsHeight
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.zyf.electronicwoodfish.ui.theme.ElectronicWoodfishComposeTheme
 import java.util.*
@@ -54,30 +55,27 @@ class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalComposeUiApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        transparentStatusBar()
+        setAndroidNativeLightStatusBar()
         setContent {
             ElectronicWoodfishComposeTheme {
-                ProvideWindowInsets{
-                    val systemUiController = rememberSystemUiController()
-                    SideEffect {
-                        systemUiController.setStatusBarColor(Transparent, darkIcons = false)
-                    }
-                    Surface(
-                        modifier = Modifier.fillMaxSize(),
-                        color = MaterialTheme.colors.background
-                    ) {
-                        ScreenPage(this)
-                        //Leetcode()
-                        //CustomImage()
-                        //XmlView()
-                    }
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colors.background
+                ) {
+                    ScreenPage(this)
+                    //Leetcode()
+                    //CustomImage()
+                    //XmlView()
                 }
-
             }
         }
     }
 }
 
+/*
+* compose嵌套原生view
+* */
 @Composable
 fun XmlView(){
     var selectedItem by remember { mutableStateOf(0) }
@@ -95,6 +93,10 @@ fun XmlView(){
         })
 }
 
+
+/*
+* Image相关
+* */
 @Composable
 @Preview(showBackground = true ,showSystemUi = true)
 fun CustomImage(){
@@ -167,6 +169,9 @@ fun CustomImage(){
 
 }
 
+/*
+* 力扣
+* */
 @Composable
 fun Leetcode(){
     val list = mutableListOf<Int>()

@@ -219,5 +219,34 @@ for (v in map.keys){
 
  }
 
+ //35. 搜索插入位置
+ fun searchInsert(nums: IntArray, target: Int): Int {
+  var left = 0
+  var right = nums.size - 1
+  var index = -1
+
+  while (left <= right) {
+   val middle = left + (right - left) / 2
+   if (nums[middle] > target) {
+    // target 比中间值小，说明位于数组的左侧
+    right = middle -1
+   } else if (nums[middle] < target) {
+    // target 比中间值大，说明位于数组的右侧
+    left = middle + 1
+   } else {
+    index = middle
+    break
+   }
+  }
+
+  //等于-1及数组中没有target，需要插入
+  if(index==-1){
+   index = left
+  }
+  return index
+ }
+
+
+
 
 }

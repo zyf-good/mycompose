@@ -1,9 +1,7 @@
 package com.zyf.electronicwoodfish
 
-import androidx.compose.ui.input.key.Key.Companion.J
-import androidx.constraintlayout.compose.DesignElements.map
+import jdk.internal.org.jline.utils.Colors.s
 import java.lang.Integer.max
-import java.lang.Integer.sum
 import java.util.*
 
 
@@ -245,6 +243,17 @@ for (v in map.keys){
   }
   return index
  }
+
+//反转字符串中的单词 III
+ fun reverseWords(s: String): String {
+ val strs = s.split(" ")
+ val buffer = StringBuffer()
+ for (i in strs.indices) {
+  buffer.append(StringBuffer(strs[i]).reverse().toString())
+  buffer.append(" ")
+ }
+ return buffer.toString().trim { it <= ' ' }
+}
 
 
 

@@ -1,6 +1,7 @@
 package com.zyf.electronicwoodfish
 
 
+import org.w3c.dom.Node
 import java.lang.Integer.max
 import java.util.*
 
@@ -255,7 +256,36 @@ for (v in map.keys){
  return buffer.toString().trim { it <= ' ' }
 }
 
+//876. 链表的中间结点
+// fun middleNode(head: ListNode?): ListNode? {
+//    //快慢指针
+// var all : ListNode? = head
+// var mid : ListNode? = head
+// while(all!=null&&all.next!=null){
+//  all = all!!.next.next
+//  mid = mid?.next
+// }
+// return mid
+// }
 
+// 19. 删除链表的倒数第 N 个结点
+// fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
+// //虚拟头节点
+// val pre = ListNode(0).apply {
+//  this.next = head
+// }
+// var fastNode: ListNode? = pre
+// var slowNode: ListNode? = pre
+// for (i in 0..n) {
+//  fastNode = fastNode?.next
+// }
+// while (fastNode != null) {
+//  slowNode = slowNode?.next
+//  fastNode = fastNode.next
+// }
+// slowNode?.next = slowNode?.next?.next
+// return pre.next
+// }
 
 
 }

@@ -1,7 +1,6 @@
 package com.zyf.electronicwoodfish
 
 
-import org.w3c.dom.Node
 import java.lang.Integer.max
 import java.util.*
 
@@ -286,6 +285,66 @@ for (v in map.keys){
 // slowNode?.next = slowNode?.next?.next
 // return pre.next
 // }
+
+ //3. 无重复字符的最长子串
+ fun lengthOfLongestSubstring(str: String): Int {
+// 结果
+  var result  = 0
+  // 右指针
+  var right = 0
+  // 哈希集合，记录出现的字符
+  val chars = hashSetOf<Char>()
+  // 遍历字符串中的字符
+  str.forEachIndexed { index, _ ->
+   // 当索引大于0的时候，执行以下逻辑
+   if (index > 0) {
+    // 移除一个字符，左指针向右移动一格
+    chars.remove(str[index - 1])
+   }
+   while (right < str.length && !chars.contains(str[right])) {
+    // 如果索引小于字符串的长度，同时该字符没出现过，就将该字符放到哈希集合中，然后右指针向右移动一格
+    chars.add(str[right])
+    right++
+   }
+   // 计算长度的最大值
+   result = kotlin.math.max(result, right - index)
+  }
+  return result
+ }
+
+ //n个数字，求组合数量，和各个组合内容。
+ //比如，0，1，2，3，4
+ //[0],[0,1],[0,1,2]
+ //[0,1,2]和[1,0,2]和[2,1,0]这样的，算重复，不计算在数量内
+ fun SummationAnddeDuplication() {
+  val long = System.currentTimeMillis()
+  val numbers = mutableListOf<Int>()
+  for (i in 1..256){
+   numbers.add(i)
+  }
+  val combinations = generateCombinations(numbers)
+  println("Combinations:")
+  combinations.forEach { println(it) }
+  val long1 = System.currentTimeMillis()-long
+  println("Number of combinations: ${combinations.size}" +"   time :  ${long1/1000}s" )
+
+ }
+
+ fun generateCombinations(numbers: List<Int>): List<List<Int>> {
+  val combinations = mutableListOf<List<Int>>()
+  for (i in 0 until numbers.size) {
+   val combination = mutableListOf<Int>()
+   combination.add(numbers[i])
+   combinations.add(combination)
+   for (j in i + 1 until numbers.size) {
+    combination.add(numbers[j])
+    combinations.add(combination.toList())
+   }
+  }
+  return combinations.distinct()
+ }
+
+
 
 
 }

@@ -2,7 +2,6 @@ package com.zyf.electronicwoodfish
 
 
 import java.lang.Integer.max
-import java.util.*
 
 
 /**
@@ -344,7 +343,83 @@ for (v in map.keys){
   return combinations.distinct()
  }
 
+ //567. 字符串的排列
+ fun checkInclusion(s1: String, s2: String): Boolean {
+  val cnt = s1.groupingBy { it }.eachCount()
+  return s2.windowedSequence(s1.length).any { window -> window.groupingBy { it }.eachCount() == cnt }
+ }
 
+ //733. 图像渲染
+ fun floodFill(image: Array<IntArray>, sr: Int, sc: Int, newColor: Int): Array<IntArray> {
+  val oldColor = image[sr][sc]
+  // 一样就不需要处理了
+  if (oldColor != newColor) {
+   dfs(image, sr, sc, oldColor, newColor)
+  }
+  return image
+ }
+
+ private fun dfs(image: Array<IntArray>, sr: Int, sc: Int, oldColor: Int, newColor: Int) {
+  // 判断当前位置是否符合要求
+  if (
+   sr < 0 ||
+   sr >= image.size ||
+   sc < 0 ||
+   sc >= image[sr].size ||
+   image[sr][sc] != oldColor
+  ) {
+   return
+  }
+
+  // 修改颜色
+  image[sr][sc] = newColor
+
+  // 四个方向
+  dfs(image, sr + 1, sc, oldColor, newColor)
+  dfs(image, sr - 1, sc, oldColor, newColor)
+  dfs(image, sr, sc + 1, oldColor, newColor)
+  dfs(image, sr, sc - 1, oldColor, newColor)
+ }
+
+ //695. 岛屿的最大面积
+ fun maxAreaOfIsland(grid: Array<IntArray>): Int {
+  //定义一个表示岛屿的面积
+  var max = 0
+  //这两个for循环是来遍历整张二维格上的所有陆地的。
+  //i 表示行，j表示列
+  for (i in grid.indices) {
+   for (j in grid[0].indices) {
+    //陆地的格
+    if (grid[i][j] == 1) {
+     //取出最大的面积
+     max = max.coerceAtLeast(dfs(grid, i, j))
+    }
+   }
+  }
+  //返回最大的陆地面积
+  return max
+ }
+
+ fun dfs(grid: Array<IntArray>, i: Int, j: Int): Int {
+  //当超出岛屿边界（上下左右）的时候，就直接退出，特别要加上当遍历到海洋的时候也要退出，
+  if (i < 0 || j < 0 || i >= grid.size || j >= grid[0].size || grid[i][j] == 0) {
+   return 0
+  }
+
+  //定义一个变量表示岛屿的面积，就是包含几个陆地
+  var sum = 1
+  //将陆地改为海洋，防止重复陆地重复遍历。
+  grid[i][j] = 0
+  //遍历上方元素，每遍历一次陆地就加一
+  sum += dfs(grid, i + 1, j)
+  //遍历下方元素
+  sum += dfs(grid, i - 1, j)
+  //遍历右边元素
+  sum += dfs(grid, i, j + 1)
+  //遍历左边元素
+  sum += dfs(grid, i, j - 1)
+  return sum
+ }
 
 
 }

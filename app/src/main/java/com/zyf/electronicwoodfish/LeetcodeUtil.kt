@@ -2,6 +2,9 @@ package com.zyf.electronicwoodfish
 
 
 import java.lang.Integer.max
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 
 /**
@@ -468,5 +471,98 @@ for (v in map.keys){
 //  root1.right = mergeTrees(root1.right, root2.right)
 //  return root1
 // }
+
+
+ //77. 组合
+ var res = mutableListOf<List<Int>>()
+ var list = mutableListOf<Int>()
+ fun combine(n: Int, k: Int): List<List<Int>> {
+  backtracking(n,1,k)
+  return res
+ }
+ fun backtracking(n:Int, start:Int, k:Int){
+  if(list.size==k){
+   res.add(list.toMutableList())
+   return
+  }
+  for(i in start .. n){
+   list.add(i)
+   backtracking(n,i+1,k)
+   list.remove(i)
+  }
+ }
+
+ //46. 全排列
+ private lateinit var used:BooleanArray
+ fun permute(nums: IntArray): List<List<Int>> {
+  val n = nums.size
+  used = BooleanArray(n)
+  var Size = 1
+  for (i in 1..n) {
+   Size *= i
+  }
+  val res = ArrayList<LinkedList<Int>>()
+  val temp = LinkedList<Int>()
+  backtrack(nums,res,temp)
+  return res
+ }
+ private fun backtrack(nums: IntArray,res: ArrayList<LinkedList<Int>>, temp:LinkedList<Int>):Unit {
+  if (temp.size == nums.size) {
+   res.add(LinkedList<Int>(temp))
+   return
+  }
+  for (i in 0 until nums.size) {
+   if (used[i])continue
+   used[i] = true
+   temp.add(nums[i])
+   backtrack(nums, res, temp)
+   used[i] = false
+   temp.removeLast()
+  }
+ }
+
+ //784. 字母大小写全排列(只是觉得太流弊了，实际上还是用上面46. 全排列的解法思路才是正常的)
+ fun letterCasePermutation(s: String): List<String> {
+  return s.split("").filter{ it.isNotEmpty() }
+   .map {
+    //println(it)
+    if ("\\d".toRegex().matches(it)) listOf(it) else listOf(it.toLowerCase(), it.toUpperCase()) }.fold(
+    listOf("")
+   ) { p, c -> p.map { v -> c.map { b -> v + b } }.flatten() }
+ }
+
+ //70. 爬楼梯
+ fun climbStairs(n: Int): Int {
+  when (n) {
+   1 -> return 1
+   2 -> return 2
+   3 -> return 3
+  }
+
+  // dp思想
+  /*
+      状态分析：
+      集合：dp[i][j]表示从第i个楼梯爬到第j个楼梯的方式
+      属性：累加
+   */
+  val dp = IntArray(n+1)
+  dp[0] = 0    // 从第0层楼爬到第0层，没有方法
+  dp[1] = 1    // 从第0层爬到第1层，就一种方法
+  dp[2] = 2    // 从第0层楼爬到第1层，可以从第1层爬到第2层，也可以从第0层爬到第2层
+
+  /*
+      状态计算：
+      dp[j] = dp[j-1]+dp[j-2]
+   */
+
+  for (j in 3..n) {
+   dp[j] = dp[j-1]+dp[j-2]
+  }
+
+  return dp[n]
+ }
+
+
+
 
 }

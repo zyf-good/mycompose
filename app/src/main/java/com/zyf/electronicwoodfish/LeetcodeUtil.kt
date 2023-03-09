@@ -421,5 +421,52 @@ for (v in map.keys){
   return sum
  }
 
+ //206. 反转链表
+// fun reverseList(head: ListNode?): ListNode? {
+//  if (head == null) {
+//   return null
+//  }
+//  var last: ListNode? = null
+//  var current = head
+//  while (current?.next != null) {
+//   val next = current.next
+//   current.next = last
+//   last = current
+//   current = next
+//  }
+//  current!!.next = last
+//  return current
+// }
+
+ //21. 合并两个有序链表
+//  fun mergeTwoLists(l1: ListNode?, l2: ListNode?): ListNode? {
+//  if (l1 == null) {
+//   return l2
+//  }
+//  if (l2 == null) {
+//   return l1
+//  }
+//  return if (l1.`val` < l2.`val`) {
+//   l1.next = mergeTwoLists(l1.next, l2)
+//   l1
+//  } else {
+//   l2.next = mergeTwoLists(l1, l2.next)
+//   l2
+//  }
+// }
+
+ //617. 合并二叉树
+//  fun mergeTrees(
+//  root1: javax.swing.tree.TreeNode?,
+//  root2: javax.swing.tree.TreeNode?
+// ): javax.swing.tree.TreeNode? {
+//  if (root1 == null && root2 == null) return null
+//  if (root1 == null) return root2
+//  if (root2 == null) return root1
+//  root1.`val` += root2.`val`
+//  root1.left = mergeTrees(root1.left, root2.left)
+//  root1.right = mergeTrees(root1.right, root2.right)
+//  return root1
+// }
 
 }

@@ -3,6 +3,7 @@ package com.zyf.electronicwoodfish
 
 import android.content.Context
 import android.media.MediaPlayer
+import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,11 +29,11 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.*
-import androidx.compose.ui.graphics.Color.Companion.Transparent
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.graphics.Color.Companion.Yellow
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -42,10 +43,12 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.core.view.WindowCompat
-import com.google.accompanist.insets.ProvideWindowInsets
-import com.google.accompanist.insets.statusBarsHeight
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import coil.ImageLoader
+import coil.compose.AsyncImage
+import coil.compose.rememberAsyncImagePainter
+//import coil.decode.GifDecoder
+//import coil.decode.ImageDecoderDecoder
+import coil.request.ImageRequest
 import com.zyf.electronicwoodfish.ui.theme.ElectronicWoodfishComposeTheme
 import java.util.*
 import kotlin.concurrent.schedule
@@ -66,6 +69,7 @@ class MainActivity : ComponentActivity() {
                     ScreenPage(this)
                     //Leetcode()
                     //CustomImage()
+//                    NetworkImage()
                     //XmlView()
                 }
             }
@@ -167,6 +171,38 @@ fun CustomImage(){
     }
 
 
+}
+
+
+/*
+* 加载网络图片
+* */
+@Composable
+fun NetworkImage(){
+    val url = "https://img-blog.csdnimg.cn/6343e1698dc34686b87dbf50f4eaf0f2.png"
+    Column(
+        Modifier.padding(top = 50.dp)
+    ){
+        AsyncImage(
+            model = url,
+            contentDescription = null
+        )
+
+
+
+        val modelBuilder = ImageRequest.Builder(LocalContext.current)
+            .data(url ?: "")
+            .crossfade(false)
+            .allowHardware(true)
+            .build()
+
+        Image(
+            painter = rememberAsyncImagePainter(
+                model = modelBuilder
+            ),
+            contentDescription = "头像",
+        )
+    }
 }
 
 /*

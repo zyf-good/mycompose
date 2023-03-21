@@ -2,7 +2,10 @@ package com.zyf.electronicwoodfish
 
 import android.app.Activity
 import android.view.View
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.core.view.WindowCompat
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 /**
  * Created by ssk on 2022/4/17.
@@ -28,4 +31,7 @@ fun Activity.setAndroidNativeLightStatusBar() {
         decor.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
     }
+
+
+
 }

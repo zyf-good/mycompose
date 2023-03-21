@@ -35,6 +35,8 @@ import com.zyf.electronicwoodfish.util.ShareUtil
 import java.util.*
 import kotlin.concurrent.schedule
 import com.zyf.electronicwoodfish.R
+import com.zyf.electronicwoodfish.nav.NavController
+import com.zyf.electronicwoodfish.nav.RouterUrls
 
 /**
  * @author zengyifeng
@@ -48,7 +50,7 @@ import com.zyf.electronicwoodfish.R
 fun ScreenPage(context: Context){
 
     ConstraintLayout (Modifier.background(Color(0xFF000000))){
-        val (topLayout,center) =createRefs()
+        val (topLayout,center,btn) =createRefs()
 
         var showDialog by remember { mutableStateOf(false) }
         var showLoading by remember { mutableStateOf(false) }
@@ -203,6 +205,18 @@ fun ScreenPage(context: Context){
                         )
                     }
             )
+        }
+
+
+
+        Button(
+            modifier = Modifier.background(Color(0xFF000000))
+                .constrainAs(btn){
+                    bottom.linkTo(parent.bottom)
+                },
+            onClick = { NavController.instance.navigate(RouterUrls.CUSTOMIMAGE) }
+        ) {
+
         }
 
         //Dialog

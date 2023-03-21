@@ -2,7 +2,10 @@ package com.zyf.electronicwoodfish.view
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.navigation.compose.currentBackStackEntryAsState
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.zyf.electronicwoodfish.nav.NavController
+import com.zyf.electronicwoodfish.nav.RouterUrls
 
 /**
  * @author zengyifeng
@@ -13,5 +16,11 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 @Composable
 fun setFixSystemBarsColor() {
     val sysUiController = rememberSystemUiController()
-    sysUiController.setSystemBarsColor(Color.Transparent, false)
+    val curRouteName = NavController.instance.currentBackStackEntryAsState().value?.destination?.route
+    if (curRouteName == RouterUrls.SCREENPAGE){
+        sysUiController.setSystemBarsColor(Color.Transparent, false)
+    }else{
+        sysUiController.setSystemBarsColor(Color.Transparent, true)
+    }
+
 }

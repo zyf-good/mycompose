@@ -74,8 +74,7 @@ fun CustomImage(){
     )
 
     Row (
-        Modifier.fillMaxSize()
-            .background(Color.White),
+        Modifier.fillMaxSize(),
         horizontalArrangement = Arrangement.Center ,
         verticalAlignment = Alignment.CenterVertically
     ){

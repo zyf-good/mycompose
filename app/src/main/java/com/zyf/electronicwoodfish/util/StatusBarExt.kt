@@ -2,10 +2,7 @@ package com.zyf.electronicwoodfish
 
 import android.app.Activity
 import android.view.View
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.core.view.WindowCompat
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 /**
  * Created by ssk on 2022/4/17.

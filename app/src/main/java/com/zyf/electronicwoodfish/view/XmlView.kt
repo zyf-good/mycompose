@@ -1,10 +1,12 @@
 package com.zyf.electronicwoodfish.view
 
 import android.widget.Button
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
+import com.zyf.electronicwoodfish.util.cdp
 
 /**
  * @author zengyifeng
@@ -18,15 +20,21 @@ import androidx.compose.ui.viewinterop.AndroidView
 fun XmlView(){
     var selectedItem by remember { mutableStateOf(0) }
 
-    AndroidView(factory = { context ->
-        Button(context).apply{
-            setOnClickListener{
-                selectedItem += 1
+    Row (
+        Modifier.fillMaxSize(),
+        horizontalArrangement = Arrangement.Center ,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        AndroidView(factory = { context ->
+            Button(context).apply {
+                setOnClickListener {
+                    selectedItem += 1
+                }
             }
-        }
-    },
-        modifier = Modifier.fillMaxSize(),
-        update = {view ->
-            view.text = selectedItem.toString()
-        })
+        },
+            modifier = Modifier.size(200.cdp),
+            update = { view ->
+                view.text = selectedItem.toString()
+            })
+    }
 }

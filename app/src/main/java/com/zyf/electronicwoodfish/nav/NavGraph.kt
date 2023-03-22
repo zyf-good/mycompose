@@ -41,6 +41,12 @@ fun InitNavController(
         }
 
         composable(
+            RouterUrls.SURPROSEPAGE
+        ) {
+            SurprisePage()
+        }
+
+        composable(
             RouterUrls.LEETCODE
         ) {
             Leetcode()
@@ -61,7 +67,7 @@ fun InitNavController(
         composable(
             RouterUrls.NETWORKIMAGE
         ) {
-            NetworkImage()
+            NetworkImage(context)
         }
 
     }

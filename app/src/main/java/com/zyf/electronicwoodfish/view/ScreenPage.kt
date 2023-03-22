@@ -48,7 +48,6 @@ import com.zyf.electronicwoodfish.nav.RouterUrls
 @ExperimentalComposeUiApi
 @Composable
 fun ScreenPage(context: Context){
-
     ConstraintLayout (Modifier.background(Color(0xFF000000))){
         val (topLayout,center,btn) =createRefs()
 
@@ -210,11 +209,12 @@ fun ScreenPage(context: Context){
 
 
         Button(
-            modifier = Modifier.background(Color(0xFF000000))
-                .constrainAs(btn){
+            modifier = Modifier
+                .background(Color(0xFF000000))
+                .constrainAs(btn) {
                     bottom.linkTo(parent.bottom)
                 },
-            onClick = { NavController.instance.navigate(RouterUrls.CUSTOMIMAGE) }
+            onClick = { NavController.instance.navigate(RouterUrls.SURPROSEPAGE) }
         ) {
 
         }
@@ -344,7 +344,7 @@ fun ScreenPage(context: Context){
 fun getMeritsText(context: Context): String {
     val value: String? = ShareUtil.getString("MeritsText", context)
     if (value.isNullOrEmpty()) {
-        ShareUtil.putString("Merits", "0", context)
+        ShareUtil.putString("MeritsText", "功德+1", context)
         return "功德+1"
     }
     return  value

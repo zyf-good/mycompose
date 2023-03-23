@@ -1,7 +1,10 @@
 package com.zyf.electronicwoodfish.view
 
+import android.app.Activity
 import android.content.Context
 import android.media.MediaPlayer
+import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.*
 import androidx.compose.animation.fadeOut
@@ -31,12 +34,15 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.zyf.electronicwoodfish.MyTileService
 import com.zyf.electronicwoodfish.util.ShareUtil
 import java.util.*
 import kotlin.concurrent.schedule
 import com.zyf.electronicwoodfish.R
 import com.zyf.electronicwoodfish.nav.NavController
 import com.zyf.electronicwoodfish.nav.RouterUrls
+import com.zyf.electronicwoodfish.util.TwoBackFinish
+import kotlinx.coroutines.launch
 
 /**
  * @author zengyifeng
@@ -60,6 +66,8 @@ fun ScreenPage(context: Context){
         val number = rememberSaveable {
             mutableStateOf(num)
         }
+
+
         var mMediaPlayer by remember {
             mutableStateOf( MediaPlayer.create(context,R.raw.wooden_fish01))
         }
@@ -98,6 +106,27 @@ fun ScreenPage(context: Context){
         var woodFishPic = rememberSaveable {
             mutableStateOf(R.mipmap.wood_fish)
         }
+
+        val coroutineScope = rememberCoroutineScope()
+        LaunchedEffect(Unit) {
+            val timerTask = object : TimerTask() {
+                override fun run() {
+                    coroutineScope.launch {
+                        // 定时器触发的操作
+                        number.value = getMerits(context)
+                    }
+                }
+            }
+            Timer().scheduleAtFixedRate(timerTask, 0, 5000)
+        }
+
+        BackHandler {
+
+                    TwoBackFinish().execute { (context as Activity).finish() }
+
+
+        }
+
         /*
         * 顶部按钮
         * */
@@ -192,6 +221,7 @@ fun ScreenPage(context: Context){
                         detectTapGestures(
                             onPress = {
                                 press.value = !press.value
+                                number.value = getMerits(context)
                                 number.value++
                                 saveMerits(number.value.toString(), context, "Merits")
                                 mMediaPlayer.start()

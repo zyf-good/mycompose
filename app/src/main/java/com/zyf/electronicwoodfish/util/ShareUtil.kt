@@ -13,7 +13,7 @@ object ShareUtil {
  private var sps: SharedPreferences?=null
  private fun getSps(context: Context):SharedPreferences{
   if(sps ==null){
-   sps =context.getSharedPreferences("default",Context.MODE_PRIVATE)
+   sps =context.getSharedPreferences("default",Context.MODE_MULTI_PROCESS)
   }
   return sps!!
  }

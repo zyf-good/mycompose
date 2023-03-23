@@ -3,7 +3,6 @@ package com.zyf.electronicwoodfish.view
 import android.app.Activity
 import android.content.Context
 import android.media.MediaPlayer
-import android.util.Log
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.*
@@ -34,15 +33,14 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.zyf.electronicwoodfish.MyTileService
-import com.zyf.electronicwoodfish.util.ShareUtil
-import java.util.*
-import kotlin.concurrent.schedule
 import com.zyf.electronicwoodfish.R
 import com.zyf.electronicwoodfish.nav.NavController
 import com.zyf.electronicwoodfish.nav.RouterUrls
+import com.zyf.electronicwoodfish.util.ShareUtil
 import com.zyf.electronicwoodfish.util.TwoBackFinish
 import kotlinx.coroutines.launch
+import java.util.*
+import kotlin.concurrent.schedule
 
 /**
  * @author zengyifeng
@@ -53,29 +51,34 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterialApi::class)
 @ExperimentalComposeUiApi
 @Composable
-fun ScreenPage(context: Context){
-    ConstraintLayout (Modifier.background(Color(0xFF000000))){
-        val (topLayout,center,btn) =createRefs()
+fun ScreenPage(context: Context) {
+    ConstraintLayout(Modifier.background(Color(0xFF000000))) {
+        val (topLayout, center, btn) = createRefs()
 
         var showDialog by remember { mutableStateOf(false) }
         var showLoading by remember { mutableStateOf(false) }
-        val text = rememberSaveable{
+        val text = rememberSaveable {
             mutableStateOf(getMeritsText(context))
         }
-        val num:Int = getMerits(context)
+        val num: Int = getMerits(context)
         val number = rememberSaveable {
             mutableStateOf(num)
         }
 
 
         var mMediaPlayer by remember {
-            mutableStateOf( MediaPlayer.create(context,R.raw.wooden_fish01))
+            mutableStateOf(MediaPlayer.create(context, R.raw.wooden_fish01))
         }
 
         val press = rememberSaveable {
             mutableStateOf(false)
         }
-        val size  = animateSizeAsState(targetValue = if (press.value) Size(120f, 120f) else Size(150f, 150f) )
+        val size = animateSizeAsState(
+            targetValue = if (press.value) Size(120f, 120f) else Size(
+                150f,
+                150f
+            )
+        )
 
 
         val infiniteTransition = rememberInfiniteTransition()
@@ -87,7 +90,7 @@ fun ScreenPage(context: Context){
             )
         )
         val scrollerLazyStata = rememberLazyListState()
-        val mp3List :MutableList<Int> = mutableListOf()
+        val mp3List: MutableList<Int> = mutableListOf()
         mp3List.add(R.raw.wooden_fish01)
         mp3List.add(R.raw.wooden_fish02)
         mp3List.add(R.raw.wooden_fish03)
@@ -121,22 +124,19 @@ fun ScreenPage(context: Context){
         }
 
         BackHandler {
-
-                    TwoBackFinish().execute { (context as Activity).finish() }
-
-
+            TwoBackFinish().execute { (context as Activity).finish() }
         }
 
         /*
         * 顶部按钮
         * */
         Column(
-            Modifier.constrainAs(topLayout){
+            Modifier.constrainAs(topLayout) {
                 top.linkTo(parent.top)
                 start.linkTo(parent.start)
                 end.linkTo(parent.end)
             }
-        ){
+        ) {
 
             Text(
                 "",
@@ -178,15 +178,13 @@ fun ScreenPage(context: Context){
             }
 
 
-
-
         }
 
         /*
         * 中间的木鱼
         * */
         Column(
-            modifier = Modifier.constrainAs(center){
+            modifier = Modifier.constrainAs(center) {
                 top.linkTo(topLayout.top)
                 bottom.linkTo(parent.bottom)
                 start.linkTo(parent.start)
@@ -196,15 +194,15 @@ fun ScreenPage(context: Context){
         ) {
             AnimatedVisibility(
                 visible = press.value,
-                enter =  slideInVertically(
+                enter = slideInVertically(
                     initialOffsetY = { fullHeight -> -fullHeight },
                     animationSpec = tween(durationMillis = 250, easing = LinearOutSlowInEasing)
-                ) ,
+                ),
                 exit = slideOutVertically(
                     targetOffsetY = { fullHeight -> -fullHeight },
                     animationSpec = tween(durationMillis = 250, easing = LinearOutSlowInEasing)
                 ) + fadeOut()
-            ){
+            ) {
                 Text(
                     text = text.value,
                     textAlign = TextAlign.Center,
@@ -252,8 +250,11 @@ fun ScreenPage(context: Context){
         //Dialog
         AnimatedVisibility(
             visible = showDialog
-        ){
-            Dialog(onDismissRequest = { }, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+        ) {
+            Dialog(
+                onDismissRequest = { },
+                properties = DialogProperties(usePlatformDefaultWidth = false)
+            ) {
                 Box(
                     Modifier
                         .fillMaxWidth()
@@ -268,13 +269,16 @@ fun ScreenPage(context: Context){
                             .height(300.dp)
                             .clickable { }
                             .align(Alignment.BottomCenter)
-                            .background(MaterialTheme.colors.background)){
-                        Row(Modifier.padding(top = 15.dp, bottom = 15.dp),verticalAlignment = Alignment.Top) {
+                            .background(MaterialTheme.colors.background)) {
+                        Row(
+                            Modifier.padding(top = 15.dp, bottom = 15.dp),
+                            verticalAlignment = Alignment.Top
+                        ) {
                             Spacer(Modifier.weight(1f))
                             TextField(value = text.value, onValueChange = {
                                 text.value = it
-                                saveMerits(it,context,"MeritsText")
-                            } )
+                                saveMerits(it, context, "MeritsText")
+                            })
                             Spacer(Modifier.weight(1f))
 
                         }
@@ -296,23 +300,35 @@ fun ScreenPage(context: Context){
                                 })
                         }
                         Spacer(modifier = Modifier.height(15.dp))
-                        LazyRow(Modifier.height(45.dp), state = scrollerLazyStata){
-                            items(14){ index ->
+                        LazyRow(Modifier.height(45.dp), state = scrollerLazyStata) {
+                            items(14) { index ->
                                 ListItem(
                                     trailing = { Text(text = "木鱼音效$index ", color = Color.White) },
-                                    secondaryText  = { Text(text = "木鱼音效$index ", color = Color.White) },
-                                    text  = { Text(text = "木鱼音效$index ", color = Color.White) },
-                                    icon = { Icon(painter = painterResource(R.mipmap.wood_fish), contentDescription = "") },
+                                    secondaryText = {
+                                        Text(
+                                            text = "木鱼音效$index ",
+                                            color = Color.White
+                                        )
+                                    },
+                                    text = { Text(text = "木鱼音效$index ", color = Color.White) },
+                                    icon = {
+                                        Icon(
+                                            painter = painterResource(R.mipmap.wood_fish),
+                                            contentDescription = ""
+                                        )
+                                    },
                                     modifier = Modifier.clickable {
-                                        mMediaPlayer = MediaPlayer.create(context,
+                                        mMediaPlayer = MediaPlayer.create(
+                                            context,
                                             mp3List[index]
                                         )
                                     }
                                 )
                             }
                         }
-                        Column (    modifier = Modifier
-                            .fillMaxWidth(),
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth(),
                             horizontalAlignment = Alignment.CenterHorizontally,
                         ) {
                             Button(onClick = {
@@ -330,11 +346,14 @@ fun ScreenPage(context: Context){
         }
 
         //loading
-        if (showLoading){
-            Timer().schedule(200){
+        if (showLoading) {
+            Timer().schedule(200) {
                 showLoading = false
             }
-            Dialog(onDismissRequest = { }, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+            Dialog(
+                onDismissRequest = { },
+                properties = DialogProperties(usePlatformDefaultWidth = false)
+            ) {
                 Box(
                     Modifier
                         .fillMaxWidth()
@@ -348,7 +367,7 @@ fun ScreenPage(context: Context){
                             .height(75.dp)
                             .clickable { }
                             .align(Alignment.Center)
-                    ){
+                    ) {
                         Image(
                             painter = painterResource(R.mipmap.icon_loading),
                             contentDescription = "设置",
@@ -377,7 +396,7 @@ fun getMeritsText(context: Context): String {
         ShareUtil.putString("MeritsText", "功德+1", context)
         return "功德+1"
     }
-    return  value
+    return value
 }
 
 
@@ -387,10 +406,10 @@ fun getMerits(context: Context): Int {
         ShareUtil.putString("Merits", "0", context)
         return 0
     }
-    return  value.toInt()
+    return value.toInt()
 }
 
 
-fun saveMerits(number: String, context: Context, key : String){
+fun saveMerits(number: String, context: Context, key: String) {
     ShareUtil.putString(key, number, context)
 }

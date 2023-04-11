@@ -52,14 +52,16 @@ fun SurprisePage() {
             list.add(RouterUrls.CUSTOMIMAGE)
             list.add(RouterUrls.NETWORKIMAGE)
             list.add(RouterUrls.LEETCODE)
+            list.add(RouterUrls.DISPOSABLEDFFECTVIEW)
 
             val nameList = mutableListOf<String>()
             nameList.add(RouterNameUrls.XMLVIEW)
             nameList.add(RouterNameUrls.CUSTOMIMAGE)
             nameList.add(RouterNameUrls.NETWORKIMAGE)
             nameList.add(RouterNameUrls.LEETCODE)
+            nameList.add(RouterNameUrls.DISPOSABLEDFFECTVIEW)
 
-            items(4) { index ->
+            items(nameList.size) { index ->
                 //获取到对应的本地图标地址id
                 val resID = LocalContext.current.resources
                     .getIdentifier(list[index], "mipmap", LocalContext.current.packageName)

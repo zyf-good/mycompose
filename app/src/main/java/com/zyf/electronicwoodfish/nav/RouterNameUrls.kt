@@ -10,4 +10,5 @@ object RouterNameUrls {
     const val CUSTOMIMAGE = "image组件基础介绍"
     const val NETWORKIMAGE = "加载网络图片"
     const val SURPROSEPAGE = "惊喜页面"
+    const val DISPOSABLEDFFECTVIEW = "DisposableEffect效应"
 }

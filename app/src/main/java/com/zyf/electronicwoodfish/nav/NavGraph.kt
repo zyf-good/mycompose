@@ -70,6 +70,14 @@ fun InitNavController(
             NetworkImage(context)
         }
 
+        composable(
+            RouterUrls.DISPOSABLEDFFECTVIEW
+        ) {
+            DisposableEffectView()
+        }
+
+
+
     }
 
 

@@ -10,4 +10,5 @@ object RouterUrls {
     const val CUSTOMIMAGE = "custom_image"
     const val NETWORKIMAGE = "network_image"
     const val SURPROSEPAGE = "surprise_page"
+    const val DISPOSABLEDFFECTVIEW =  "disposable_effect_view"
 }
